@@ -1,0 +1,183 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+int linearSearch(int arr[], int n, int target) {
+	for (int i = 0; i < n; i++) {
+		if (arr[i] == target) {
+			return i; // Retorna el índice donde se encontró el valor
+		}
+	}
+	return -1; // Retorna -1 si el valor no se encuentra en el arreglo
+}
+int binarySearch(int arr[], int left, int right, int target) {
+	while (left <= right) {
+		int mid = left + (right - left) / 2;
+		if (arr[mid] == target) {
+			return mid; // El elemento fue encontrado, retorna el índice
+		}
+		if (arr[mid] < target) {
+			left = mid + 1; // Buscar en la mitad derecha
+		} else {
+			right = mid - 1; // Buscar en la mitad izquierda
+		}
+	}
+	return -1; // El elemento no fue encontrado
+}
+int main() {
+	int numeros[11],numeros2[11],numeros3[11],numeros4[11], arr[10],aux,min,pos, temp,target;
+	char a[11],aux2;
+	string b;
+	//string arrgeloCadena[11];
+	int n = sizeof(arr) / sizeof(arr[0]);
+	/*target;
+	cout << "ingrese los numeros que quiere ingresar" << endl;
+	for(int i=0; i<n;i++){
+		cout<<"ingrese los numeros"<<endl;
+		cin>>arr[i];
+	}
+	cout << "Por favor, ingresa un número que quieras buscar: ";
+	cin >> target;
+	
+	int count = 0;
+	for (int i = 0; i < n; i++) {
+		if (arr[i] == target) {
+			count++;
+		}
+	}
+	
+	if (count > 0) {
+		cout << "El número " << target << " se repite " << count << " veces en la lista." << endl;
+	} else {
+		cout << "El número " << target << " no se encuentra en la lista." << endl;
+	}
+	
+	cout << "¡Gracias por su visita!" << endl;*/
+	
+	
+	
+	
+	
+	
+	/*for (int i = 0; i < 5; i++) {
+		cout <<i + 1 << "Ingrese el número " << ": ";
+		cin >> numeros4[i];
+	}
+	
+	cout << "Ingrese el número que desea buscar: ";
+	cin >> target;
+	
+	int result = binarySearch(numeros4, 0, 4, target);
+	
+	if (result != -1) {
+		cout << "El valor " << target << " se encuentra en el índice " << result << ".\n";
+	} else {
+		cout << "El valor " << target << " no se encuentra en la lista.\n";
+	}*/
+	
+	
+	
+	/*for (int i=0;i<5;i++){
+		cout<<"ingrese los numeros que queire"<<endl;
+		cin>>numeros3[i];
+	}
+	cout<<"ingrese el numero que quiere buscar"<<endl;
+	cin>>target;
+	for (int i = 0; i < 5; i++) {
+		if (numeros3[i] == target) {
+			return i; // Retorna el índice donde se encontró el valor
+		}
+	}
+	int result = linearSearch(numeros3, 10, target);
+	
+	if (result != -1) {
+		cout << "El valor " << target << " se encuentra en el índice " << result << ".\n";
+	} else {
+		cout << "El valor " << target << " no se encuentra en la lista.\n";
+	}*///Primer ejercicio de la segunda parte
+	
+	
+	
+	
+	
+	
+	/*for(int i=0;i<10; i++){
+		cout<<"ingrese los numeros que usted quiera"<<endl;
+		cin>>numeros2[i];
+	}   
+	for (int i = 0; i < 10 - 1; i++) {
+		int minIndex = i;
+		for (int j = i + 1; j < 10; j++) {
+			if (numeros2[j] < numeros2[minIndex]) {
+				minIndex = j;
+			}
+		}
+		if (minIndex != i) {
+			int temp = numeros2[i];
+			numeros2[i] = numeros2[minIndex];
+			numeros2[minIndex] = temp;
+		}
+		for (int j = 0; j < 10- i - 1; j++) {
+			if (numeros2[j] > numeros2[j + 1]) {
+				int temp = numeros2[j];
+				numeros2[j] = numeros2[j + 1];
+				numeros2[j + 1] = temp;
+			}
+		}
+	}
+	cout << "Elementos ordenados en forma ascendente:\n";
+	for (int i = 0; i < 10; i++) {
+		cout <<numeros2[i] << " ";
+	}*///tercer ejercicio.
+	
+	
+	
+	/*cout << "Ingrese 10 letras separadas por espacios: ";
+	for(int i = 0; i < 10; i++) {
+		cout << "Ingrese la letra " << i + 1 << ": ";
+		cin >> a[i];
+	}
+	
+	// Ordenamiento usando el método de inserción
+	for (int i = 1; i < 10; i++) {
+		aux2 = a[i];
+		pos = i;
+		while (pos > 0 && a[pos - 1] > aux2) {
+			a[pos] = a[pos - 1];
+			pos--;
+		}
+		a[pos] = aux2; // Cambiado de aux a aux2
+	}
+	
+	cout << "Letras ordenadas en forma ascendente:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << a[i] << "\n";
+	}*///segundo ejercicio
+	
+	
+	
+	
+	/*for(int i=0;i<10;i++){
+	cout<<i+1<<")ingrese los 10 numeros"<<"; ";cin>>numeros[i];
+	}
+	for (int i = 0; i <10; i++)
+	{
+	min=i;
+	for (int j = i+1; j < 10; j++)
+	{
+	if(numeros[min]>numeros[j]){
+	min=j;
+	}
+	}
+	aux=numeros[i];
+	numeros[i]=numeros[min];
+	numeros[min]=aux;
+	}
+	cout<<"Aqui esta  numero ordenados de forma acendente:\n";
+	for (int i = 0; i < 10; i++)
+	{
+	std::cout<<numeros[i]<<"\n";
+	}*///Primer ejercicio
+	return 0;
+}
+
